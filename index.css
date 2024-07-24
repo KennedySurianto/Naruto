@@ -71,6 +71,8 @@ body {
 
 .cloud-rl {
     animation: right-to-left 7s infinite;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 @keyframes right-to-left {

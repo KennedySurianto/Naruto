@@ -16,6 +16,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 header {
@@ -86,3 +87,51 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.first-page {
+    position: relative;
+    z-index: -4;
+    width: 100vw;
+    height: 100vh;
+}
+
+#sky-img {
+    position: fixed;
+    width: 100vw;
+    z-index: -3;
+    top: 0px;
+}
+
+#cloud {
+    position: absolute;
+    z-index: -2;
+    animation: 10s cloud-anim linear infinite;
+}
+
+@keyframes cloud-anim {
+    0% {left: -80vw}
+    100% {left: 100vw}
+}
+
+#mountain {
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+    top: -25vh;
+}
+
+#canvas1 {
+    position: fixed;
+}
+
+.second-page {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.sec-bg {
+    position: absolute;
+    width: 100vw;
+}
+
