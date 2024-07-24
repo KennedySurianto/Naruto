@@ -7,11 +7,19 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="test.css">
+    <script src="jquery.min.js"></script>
 </head>
 
 <body>
+    <header>
+        <img class="header-logo" style="z-index: 10;" class="child-img" src="asset/naruto-logo.webp" alt="">
+        <div>
+            <img id="menu-btn" style="z-index: 2;" src="asset/hamburger-menu-logo.png" alt="">
+        </div>
+    </header>
+
     <div class="container">
-        <img class="fixed full-width" style="z-index: -4; top: 0; left: 0;" src="asset/home/sky.webp" alt="">
+        <img class="child-img full-width" style="z-index: -4; top: 0; left: 0;" src="asset/home/sky.webp" alt="">
         <img class="child-img" style="z-index: -3;" src="asset/home/cloud.webp" alt="">
         <img class="child-img full-width" style="z-index: -2; bottom: -40vh;" src="asset/home/mountain.webp" alt="">
     </div>
@@ -25,8 +33,23 @@
     </div>
 
     <div class="container">
-        <img style="z-index: 100; top: 0; left: 0;" class="child-img full-width" src="asset/bg_story_jp" alt="">
+        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/bg_comics_jp_light.png" alt="">
     </div>
+
+    <div class="container">
+        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/home/anime/background-light.png" alt="">
+    </div>
+
+    <div class="container">
+        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/home/manga/background-light.png" alt="">
+    </div>
+
+    <div class="container">
+        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/character/background.jpg" alt="">
+    </div>
+
+
+    <script src="home-page.js"></script>
 </body>
 
 </html>

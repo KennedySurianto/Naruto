@@ -10,6 +10,27 @@ body {
     
 }
 
+header {
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.header-logo {
+    width: 30vh;
+    margin-left: 10vh;
+    margin-top: 10vh;
+}
+
+#menu-btn {
+    
+}
+
 .container {
     width: 100vw;
     height: 110vh; 
