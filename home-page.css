@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('asset/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+header > img {
+    width: 30vh;
+    margin-left: 10vh;
+    margin-top: 10vh;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    margin-top: 2vh;
+}
+
+nav > img {
+    width: 8vh;
+    transition: 0.3s ease-in-out;
+    margin-right: 2vh;
+}
+
+nav > img:hover {
+    cursor: pointer;
+    scale: 1.4;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+}
+
+#menu {
+    position: relative;
+    display: none;
+}
+
+#menu > img {
+    position: absolute;
+    width: 130vw;
+    top: -143vh;
+    right: 0;
+    z-index: -1;
+}
+
+.menu-items {
+    position: absolute;
+    display: flex;
+    width: 65vw;
+    justify-content: space-around;
+    align-items: end;
+    top: 10vh;
+    right: 15vh;
+}
+
+a {
+    font-size: 5vh;
+    color: white;
+    text-decoration: none;
+}

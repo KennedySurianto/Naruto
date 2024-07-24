@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col>* {
+    margin: 2vh;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loading-container>* {
+    margin: 2vh;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.cloud-container {
+    width: 100vw;
+    height: fit-content;
+}
+
+.cloud-container>img {
+    width: 20vh;
+    position: relative;
+}
+
+/* left to right */
+.cloud-lr {
+    animation: myfirst 7s infinite;
+}
+
+@keyframes myfirst {
+    0% {
+        left: -10vw;
+    }
+    
+    100% {
+        left: 110vw;
+    }
+}
+
+/* right to left */
+.rl {
+    justify-content: end;
+}
+
+.cloud-rl {
+    animation: right-to-left 7s infinite;
+}
+
+@keyframes right-to-left {
+    0% {
+        right: -100vw;
+    }
+
+    100% {
+        right: 20vw;
+    }
+}
+
+.loading-img {
+    width: 30vh;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+    width: 50vh;
+}
+
+#myBar {
+    width: 1%;
+    height: 10px;
+    background-color: white;
+}
