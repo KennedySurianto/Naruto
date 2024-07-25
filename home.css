@@ -127,4 +127,5 @@ a {
     height: 30vh;
     bottom: 0;
     z-index: 100;
+    pointer-events: none;
 }
