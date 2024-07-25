@@ -11,45 +11,66 @@
 </head>
 
 <body>
-    <header>
-        <img class="header-logo" style="z-index: 10;" class="child-img" src="asset/naruto-logo.webp" alt="">
-        <div>
-            <img id="menu-btn" style="z-index: 2;" src="asset/hamburger-menu-logo.png" alt="">
+    <div class="outer-container">
+
+        <header>
+            <img class="header-logo" style="z-index: 10;" class="child-img" src="asset/naruto-logo.webp" alt="">
+            <div id="menu-container">
+                <img id="menu-btn" style="z-index: 2;" src="asset/hamburger-menu-logo.png" alt="">
+                <div id="menu">
+                    <img id="menu-bg" src="asset/home/navbar/hamburger-menu-bg.png" alt="">
+                    <div id="menu-items">
+                        <a href="">HOME</a>
+                        <a href="">CHARACTER</a>
+                        <a href="">ANIME</a>
+                        <a href="">MANGA</a>
+                        <a href="">STORY</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <canvas id="canvas">
+
+        </canvas>
+
+        <div class="container">
+            <img class="child-img full-width" style="z-index: -4; top: 0; left: 0;" src="asset/home/sky.webp" alt="">
+            <img id="cloud" class="child-img" style="z-index: -3;" src="asset/home/cloud.webp" alt="">
+            <img class="child-img full-width" style="z-index: -2; bottom: -40vh;"
+                src="asset/home/mountain.webp" alt="">
         </div>
-    </header>
 
-    <div class="container">
-        <img class="child-img full-width" style="z-index: -4; top: 0; left: 0;" src="asset/home/sky.webp" alt="">
-        <img class="child-img" style="z-index: -3;" src="asset/home/cloud.webp" alt="">
-        <img class="child-img full-width" style="z-index: -2; bottom: -40vh;" src="asset/home/mountain.webp" alt="">
+        <div class="container">
+            <img class="child-img full-width" src="asset/bg_story_jp-light.png" alt="">
+        </div>
+
+        <div class="container">
+            <video class="child-img full-width" src="asset/home/naruto-sad-video.mp4"></video>
+        </div>
+
+        <div class="container">
+            <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/bg_comics_jp_light.png"
+                alt="">
+        </div>
+
+        <div class="container">
+            <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width"
+                src="asset/home/anime/background-light.png" alt="">
+        </div>
+
+        <div class="container">
+            <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width"
+                src="asset/home/manga/background-light.png" alt="">
+        </div>
+
+        <div class="container">
+            <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/character/background.jpg"
+                alt="">
+        </div>
     </div>
 
-    <div class="container">
-        <img class="child-img full-width" src="asset/bg_story_jp-light.png" alt="">
-    </div>
-
-    <div class="container">
-        <video class="child-img full-width" src="asset/home/naruto-sad-video.mp4" autoplay></video>
-    </div>
-
-    <div class="container">
-        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/bg_comics_jp_light.png" alt="">
-    </div>
-
-    <div class="container">
-        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/home/anime/background-light.png" alt="">
-    </div>
-
-    <div class="container">
-        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/home/manga/background-light.png" alt="">
-    </div>
-
-    <div class="container">
-        <img style="z-index: -1; top: 0; left: 0;" class="child-img full-width" src="asset/character/background.jpg" alt="">
-    </div>
-
-
-    <script src="home-page.js"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>
