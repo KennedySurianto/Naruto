@@ -15,10 +15,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    overflow: hidden;
-}
-
 header {
     width: 100vw;
     height: 20vh;
