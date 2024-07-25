@@ -4,7 +4,6 @@ const menu = $('#menu');
 menuBtn.on('click', () => {
     menu.fadeToggle();
 })
-
 $(document).ready(function () {
     const canvas = $('#canvas')[0];
     const ctx = canvas.getContext('2d');
@@ -24,11 +23,11 @@ $(document).ready(function () {
         y: canvas.height / (2 * scale),
         width: 100,
         height: 100,
-        speed: 2,
+        speed: 3,
         velocityY: 0,
-        gravity: 0.2,
+        gravity: 0.3,
         jumpStrength: -10,
-        isJumping: false, 
+        isJumping: false,
         currentImage: null
     };
 
@@ -66,7 +65,6 @@ $(document).ready(function () {
         a: false,
         s: false,
         d: false,
-        space: false
     };
 
     $(document).on('keydown', function (event) {
@@ -74,7 +72,12 @@ $(document).ready(function () {
         if (event.key === 'a' || event.key === 'A') keys.a = true;
         if (event.key === 's' || event.key === 'S') keys.s = true;
         if (event.key === 'd' || event.key === 'D') keys.d = true;
-        if (event.key === ' ' || event.key === 'Spacebar') keys.space = true;
+
+        // To disable scrolling with spacebar
+        if (event.key === ' ' || event.key === 'Spacebar') {
+            keys.space = true;
+            event.preventDefault();
+        }
     });
 
     $(document).on('keyup', function (event) {
@@ -82,7 +85,6 @@ $(document).ready(function () {
         if (event.key === 'a' || event.key === 'A') keys.a = false;
         if (event.key === 's' || event.key === 'S') keys.s = false;
         if (event.key === 'd' || event.key === 'D') keys.d = false;
-        if (event.key === ' ' || event.key === 'Spacebar') keys.space = false;
     });
 
     function gameLoop() {
@@ -92,8 +94,9 @@ $(document).ready(function () {
     }
 
     function update() {
-        if (keys.w) {
-            character.y -= character.speed;
+        if (keys.w && !character.isJumping) {
+            character.velocityY = character.jumpStrength;
+            character.isJumping = true;
             character.currentImage = images.w;
         }
         if (keys.a) {
@@ -107,12 +110,6 @@ $(document).ready(function () {
         if (keys.d) {
             character.x += character.speed;
             character.currentImage = images.d;
-        }
-
-        if (keys.space && !character.isJumping) {
-            character.velocityY = character.jumpStrength;
-            character.isJumping = true;
-            character.currentImage = images.w;
         }
 
         // Apply gravity

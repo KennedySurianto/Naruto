@@ -9,7 +9,7 @@ function move() {
             if (width >= 100) {
                 clearInterval(id);
                 i = 0;
-                location.href = 'home-page.html';
+                location.href = 'test.html';
                 return;
             } else {
                 width++;

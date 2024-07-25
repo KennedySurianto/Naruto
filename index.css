@@ -51,7 +51,7 @@ body {
 
 /* left to right */
 .cloud-lr {
-    animation: myfirst 7s infinite;
+    animation: myfirst 10s linear infinite;
 }
 
 @keyframes myfirst {
@@ -70,7 +70,7 @@ body {
 }
 
 .cloud-rl {
-    animation: right-to-left 7s infinite;
+    animation: right-to-left 10s linear infinite;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }

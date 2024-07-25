@@ -43,9 +43,9 @@ header {
 
 #menu-btn {
     position: absolute;
-    right: 2vh;
-    top: 2vh;
-    transition: 0.3s ease-in-outs;
+    right: 4vh;
+    top: 3vh;
+    transition: 0.3s ease-in-out;
 }
 
 #menu-btn:hover {
@@ -111,7 +111,7 @@ a {
 
 #cloud {
     z-index: -2;
-    animation: 10s cloud-anim linear infinite;
+    animation: 20s cloud-anim linear infinite;
     bottom: -20vh;
 }
 
