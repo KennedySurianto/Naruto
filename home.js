@@ -6,6 +6,30 @@ menuBtn.on('click', () => {
     menu.fadeToggle();
 })
 
+$(document).ready(function () {
+    // Intersection Observer setup
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                $(entry.target).find('img').not('.animated').each(function () {
+                    $(this).addClass('animated').animate(
+                        {
+                            opacity: 1,
+                            left: 0
+                        },
+                        700 // Duration for both fade and slide animations
+                    );
+                });
+                observer.unobserve(entry.target); // Stop observing once animation is done
+            }
+        });
+    }, { threshold: 0.1 });
+
+    $('.letter-container').each(function () {
+        observer.observe(this);
+    });
+});
+
 // Canvas
 const canvas = $('#canvas')[0];
 const ctx = canvas.getContext('2d');
